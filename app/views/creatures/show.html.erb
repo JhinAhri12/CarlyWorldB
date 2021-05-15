@@ -1,0 +1,12 @@
+<a href="/creatures">Retour à la liste</a>
+
+<h1><%= @creature.name %></h1>
+
+<p><%= @creature.description %></p>
+
+<ul>
+  <li><%= link_to "Edit", edit_creature_path(@creature) %></li>
+  <li><%= link_to "Destroy", creature_path(@creature),
+                method: :delete,
+                data: { confirm: "Êtes-vous certain de supprimer cette créature ?" } %></li>
+</ul>
