@@ -4,7 +4,7 @@ class CreateCreatures < ActiveRecord::Migration[6.1]
       t.string :name
       t.text :description
       t.boolean :active
-
+      t.string :main_image
       t.timestamps
     end
   end

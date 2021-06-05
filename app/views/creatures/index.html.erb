@@ -1,11 +1,32 @@
-<h1>Créatures</h1>
-
-<ul>
-  <% @creatures.each do |creature| %>
-  <li>
-    <%= link_to creature.name, creature %>
-  </li>
-  <% end %>
-</ul>
-
-<%= link_to "Nouvelle Créature", new_creature_path %>
+<div class="container-fluid">
+            <h1>Créatures</h1>
+            <div class="link-c">
+                <button class="btn links-btn">
+                    <%= link_to "Nouvelle Créature", new_creature_path %>
+                </button>
+            </div>
+            <div class="col-2 search">
+                <input class="form-control" list="datalistOptions" placeholder="Chercher une créature...">
+                    <datalist id="datalistOptions">
+                        <option value="Licorne">
+                        <option value="Dragon">
+                        <option value="Hippogriffe">
+                    </datalist>
+            </div>
+            <div class="row display">
+              <% @creatures.each do |creature| %>
+                <div class="col-lg-4">
+                    <div class="card">
+                        <div class="card-header">
+                          <% if(creature.main_image.present? ) %>
+                            <h3><%= link_to creature.name, creature %></h3>
+                          <% end %>
+                        </div>
+                        <div class="card-body">
+                          <%= image_tag creature.main_image, :class => 'card-img-bottom' %>
+                        </div>
+                    </div>
+                </div>
+              <% end %>
+            </div>
+        </div>
