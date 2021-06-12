@@ -1,6 +1,6 @@
 
 
-<div>
+<main>
       <h2><%= @creature.name %></h2>
       <button class="btn links-btn">
           <a href="/creatures">Retour à la liste</a>
@@ -12,15 +12,16 @@
                     method: :delete,
                     data: { confirm: "Êtes-vous certain de supprimer cette créature ?" } , :class => 'btn actions-btn'  %>
   </div>
-  <div class="row display">
-      <div class="col-lg-4">
-          <div class="card">
-              <div class="card-header">
-                  <p class="card-text"><%= @creature.description %></p>
-              </div>
-              <div class="card-body">
-                  <%= image_tag @creature.main_image, :class => 'card-img-bottom' %>
-              </div>
-          </div>
-      </div>
-  </div>
+    <div class="row display">
+        <div class="col-lg-4">
+            <div class="card">
+                <div class="card-header">
+                    <p class="card-text"><%= @creature.description %></p>
+                </div>
+                <div class="card-body">
+                    <%= image_tag @creature.main_image, :class => 'card-img-bottom' %>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
