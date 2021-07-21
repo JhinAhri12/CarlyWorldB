@@ -128,3 +128,7 @@ form {
     width: auto;
     height: 25vh;
 }
+
+main {
+    min-height: calc(100vh - 120px);
+}
